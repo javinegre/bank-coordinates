@@ -1,14 +1,12 @@
 import CryptoJS from 'crypto-js';
-
-/*** Add encrypted data below ***/
-const encrypted = '';
+import encryptedData from '../../../data/encrypted';
 
 const getRandNumber = (secret, coord) => {
   return String(+`${secret}${coord}` % 997).padStart(3, '0');
 };
 
 export default (secret, coord) => {
-  const bytes = CryptoJS.AES.decrypt(encrypted, secret);
+  const bytes = CryptoJS.AES.decrypt(encryptedData.hash, secret);
   let deciphered = null;
   let result = '';
 

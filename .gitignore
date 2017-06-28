@@ -1,3 +1,6 @@
+data/coordinates.json
+data/encrypted.json
+
 dist/
 
 node_modules/
