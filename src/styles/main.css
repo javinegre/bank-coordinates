@@ -1,0 +1,111 @@
+html {
+    font-family: Monospace;
+    background-color: #fafafa;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23b3d6ff' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    font-size: 32px;
+}
+
+.coords {
+    position: relative;
+    max-width: 260px;
+    margin: 30vh auto 0;
+}
+
+.coords input {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 1px;
+    height: 1px;
+}
+
+.coords-display {
+    position: relative;
+    width: 100%;
+    height: 46px;
+}
+
+.coords-display-prompt {
+    width: calc(100% - 46px);
+    height: 100%;
+    background-color: #f0f0f0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.coords-display-secret {
+    float: left;
+    height: 100%;
+    transition: all 200ms ease;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.coords-display-secret-1 {
+    width: 14%;
+    background-color: hsl(27, 100%, 90%);
+}
+
+.coords-display-secret-2 {
+    width: calc(14% * 2);
+    background-color: hsl(27, 100%, 81%);
+}
+
+.coords-display-secret-3 {
+    width: calc(14% * 3);
+    background-color: hsl(27, 100%, 72%);
+}
+
+.coords-display-secret-4 {
+    width: calc(14% * 4);
+    background-color: hsl(27, 100%, 63%);
+}
+
+.coords-display-secret-5 {
+    width: calc(14% * 5);
+    background-color: hsl(27, 100%, 54%);
+}
+
+.coords-display-digit {
+    float: left;
+    width: 15%;
+    height: 100%;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: hsl(27, 100%, 50%);
+}
+
+.coords-display-digit:empty {
+    background-color: transparent;
+    border-left: none;
+}
+
+.coords-display-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46px;
+    height: 46px;
+    line-height: 50px;
+    border: none;
+    background-color: #f0f0f0;
+    border-left: 1px solid #e8e8e8;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.coords-display-btn:disabled {
+    opacity: 0.33;
+    cursor: default;
+}
+
+.coords-result {
+    text-align: center;
+    font-size: 42px;
+    line-height: 80px;
+    font-weight: 700;
+    color: #0050b4;
+}
