@@ -1,5 +1,9 @@
 const path = require('path');
+
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const AppCachePlugin = require('appcache-webpack-plugin');
+
+const MANIFEST_FILENAME = 'bank-coord.appcache';
 
 module.exports = {
   entry: './src/app/index.js',
@@ -21,7 +25,14 @@ module.exports = {
   },
   plugins: [
     new htmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      MANIFEST_FILENAME
+    }),
+    new AppCachePlugin({
+      cache: [],
+      network: null,  // No network access allowed!
+      settings: ['prefer-online'],
+      output: MANIFEST_FILENAME
     })
   ]
 };
